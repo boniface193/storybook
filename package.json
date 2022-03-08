@@ -1,0 +1,29 @@
+{
+  "name": "nodecrud",
+  "version": "1.0.0",
+  "description": "crude app with javascript server side with node js runtime",
+  "main": "app.js",
+  "scripts": {
+    "build": "cross-env NODE_ENV=production node app",
+    "serve": "cross-env NODE_ENV=development nodemon app"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "connect-mongo": "^4.4.1",
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "express-handlebars": "^5.3.3",
+    "express-session": "^1.17.2",
+    "method-override": "^3.0.0",
+    "moment": "^2.29.1",
+    "mongoose": "^5.13.6",
+    "morgan": "^1.10.0",
+    "passport": "^0.4.1",
+    "passport-google-oauth20": "^2.0.0"
+  },
+  "devDependencies": {
+    "cross-env": "^7.0.3",
+    "nodemon": "^2.0.12"
+  }
+}
