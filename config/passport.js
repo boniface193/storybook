@@ -20,10 +20,8 @@ module.exports = function (passport) {
             try {
                 let user = await User.findOne({ googleID: profile.id })
                 if (user) {
-                    // console.log('active')
                     done(null, user)
                 } else {
-                    // console.log('not active')
                     user = await User.create(newUser)
                     done(null, user)
                 }

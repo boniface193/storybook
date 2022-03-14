@@ -2,7 +2,87 @@ p {
     margin: 10px 0 !important;
 }
 .login-container{
-    width: 400px !important;
-    margin-top: 50px;
-    text-align: center;
+    overflow: hidden;
 }
+.add-container{
+  margin-top: 5%;
+  width: 60% !important;
+}
+@media (max-width: 1200px) {
+  .add-container{
+    margin-top: 5%;
+    width: 90% !important;
+  }
+}
+.chip:hover, .chip:focus {
+  background-color: #e3e2e2;
+}
+.chip:active:focus{
+  background-color: #d3d2d2;  
+}
+.chip {
+  transition: all 0.3s ease-in-out;
+  background-color: #fff;
+  border-radius: 30px;
+  border: 1px solid #d3d2d2;
+  display: inline-flex;
+  align-items:center;
+  margin-right:6px;
+  margin-bottom:6px;
+}
+
+.chip.size1 {
+  padding: 4px  6px;
+}
+
+.chip.size {
+  padding: 0px  6px 0 0px !important;
+}
+.chip img {
+  margin-right: 8px;
+}
+.chip-group{
+  display:flex;
+  flex-wrap:wrap;
+  justify-content: center;
+}
+
+.hover-title:hover{
+  color: #F8BE12;
+}
+
+.hover-title {
+  color: white;
+}
+
+div#exampleModal {
+    background: rgba(238, 238, 238, 0) !important;
+    
+}
+
+.modal-content {
+    box-shadow: none !important;
+}
+
+.horizontal-rule {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  text-align: center;
+  color: rgba(170, 170, 170, 0.5);
+}
+.horizontal-rule::before,
+  .horizontal-rule::after {
+    background-color: rgba(170, 170, 170, 0.5);
+    content: "\a0";
+    flex-grow: 1;
+    height: .5px;
+    position: relative;
+    top: 0.8em;
+  }
+::before {
+    margin-right: 0.35em;
+  }
+  ::after {
+    margin-left: 0.35em;
+  }

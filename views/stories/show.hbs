@@ -1,0 +1,28 @@
+<div class="container-fluid">
+    <div class="row mt-3">
+        <div class="col-sm-5">
+            <div class="jumbotron bg-dark rounded container">
+                <h6 class="display-6 text-white">{{story.user.displayName}}</h6>
+                <p>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</p>
+                <hr class="my-4">
+                <a class="btn btn-secondary" href="/story/user/{{story.user._id}}">More From {{story.user.firstName}}</a>
+            </div>
+        </div>
+        <div class="col-sm-7">
+            <div class=" my-4">
+                <div class="d-flex">
+                    <h1 class="display-6">{{story.title}}</h1>
+                    {{{editIcon story.user user story._id false}}}
+                    {{!-- edit user --}}
+                </div>
+
+
+                <div class="btn btn-outline-primary rounded-pill btn-sm disabled">{{story.status}}</div>
+                <img src="{{story.user.image}}" width="30px" height="30px" class="rounded-circle" alt="">
+            </div>
+            <div>
+                {{{story.body}}}
+            </div>
+        </div>
+    </div>
+</div>

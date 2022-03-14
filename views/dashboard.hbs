@@ -1,12 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dashboard</title>
-</head>
-<body>
-    <h1>dashboard</h1>
-</body>
-</html>
+<section id="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <p>Dashboard</p>
+            <h2 class="content-title mb-4">Welcome {{firstName}}</h2>
+            <span class="chip size1"> Here are your stories... </span>
+
+            {{#if stories}}
+            <table class="table table-borderless table-striped my-4">
+                <thead>
+                    <tr>
+                        <th>Title</th>
+                        <th>Date</th>
+                        <th>Status</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#each stories}}
+                    <tr>
+                        <td>
+                            <a href="/story/{{_id}}" class="text-decoration-none">
+                                {{title}}</a>
+                        </td>
+                        <td>{{formatDate createdAt 'MMMM Do YYYY, h:mm:ss a'}}</td>
+                        <td>{{status}}</td>
+                        <td>
+                            {{> _modal }}
+                            <a href="/edit/{{_id}}" class="btn btn-warning btn-sm">
+                                <i class="fas fa-edit"></i>
+                            </a>
+                            <button class="btn btn-danger btn-sm ml-3" data-bs-toggle="modal"
+                                data-bs-target="#exampleModal">
+                                <i class="fas fa-trash"></i>
+                            </button>
+                        </td>
+                    </tr>
+                    {{/each}}
+                </tbody>
+            </table>
+            {{else}}
+            <p>You have not created any stories</p>
+            {{/if}}
+        </div>
+    </div>
+    {{> _add_btn}}
+</section>

@@ -1,5 +1,5 @@
 {
-  "name": "nodecrud",
+  "name": "storybook",
   "version": "1.0.0",
   "description": "crude app with javascript server side with node js runtime",
   "main": "app.js",

@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/main.css">
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
-        integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
-        crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-    <title>storyBook</title>
-</head>
+{{> _header}}
 
 <body>
-    {{{body}}}
+    <div id="wrapper">
+        <aside id="sidebar-wrapper">
+            <div class="sidebar-brand">
+                <h2>Logo</h2>
+            </div>
+            <ul class="sidebar-nav">
+                <li class="notActive">
+                    <a href="/dashboard"><i class="fa fa-home"></i>Home</a>
+                </li>
+                <li class="notActive">
+                    <a href="/public"><i class="fa fa-bullhorn"></i>Public</a>
+                </li>
+                <li class="notActive">
+                    <a href="/edit"><i class="fa fa-user"></i>Users</a>
+                </li>
+            </ul>
+            <a class="hover-title" href="/auth/logout">
+                <div class="btn btn-secondary logout">Logout</div>
+            </a>
+        </aside>
 
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+        <div id="navbar-wrapper">
+            <nav class="navbar navbar-inverse">
+                <div class="container-fluid">
+                    <div class="navbar-header">
+                        <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
+                    </div>
+                </div>
+            </nav>
+        </div>
+
+        {{{body}}}
+
+    </div>
+
+    {{> _footer}}
 </body>
 
 </html>

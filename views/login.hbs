@@ -1,14 +1,84 @@
-<h3>
+<div class="row">
+    <div class="col-lg-6">
+        <div class="container add-container">
+            <i class="fas fa-book-reader fa-2x text-primary"></i>
+            <h1 class="display-5 text-dark fw-bold " style="margin-top: 30px;">Login</h1>
+            <p class="lead fs-4">Tell your story, and get consulting support!</p>
+            <div class="card rounded-pill text-center mt-5 btn btn-light">
+                <div class="py-1">
+                    <a href="/auth/google" class="text-decoration-none ">
+                        <img src="/images/google-log.png" width="35px" height="35px" alt="">
+                        <span class="fs-5 fw-bold text-dark mx-3">Sign in with Google</span>
+                    </a>
+                </div>
+            </div>
+            <div class="horizontal-rule my-4">
+                <span>
+                    or Sign in with Email
+                </span>
+            </div>
+            <div>
+                <form action="" method="post">
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput1" class="form-label fw-bold">Email*</label>
+                        <input type="email" class="form-control rounded-pill py-3" id="exampleFormControlInput1"
+                            placeholder="name@example.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlInput2" class="form-label fw-bold">Password*</label>
+                        <input type="password" class="form-control rounded-pill py-3" id="exampleFormControlInput2"
+                            placeholder="Min. 8 character">
+                    </div>
+                    <div class="d-flex justify-content-between mb-4">
+                        <div class="form-check">
+                            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                            <label class="form-check-label fw-bold" for="flexCheckDefault">
+                                Remember me
+                            </label>
+                        </div>
+                        <div>
+                            <a class="text-primary text-decoration-none fw-bold" style="cursor: pointer;">Forgot
+                                Password?</a>
+                        </div>
+                    </div>
+
+                    <div class="d-grid gap-2 mb-4">
+                        <button class="btn btn-primary rounded-pill py-3">Login</button>
+                    </div>
+                    <div class="fw-bold">
+                        <span>Not registered yet? <span class="text-primary" style="cursor: pointer;">Create an
+                                Account</span> </span>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="col-lg-6 bg-primary text-center d-lg-block d-none" style="height: 100vh;">
+        <img src="/images/undraw_exciting.svg" class="mt-5" width="50%" height="50%" alt="">
+        <div class=" d-flex justify-content-center mt-5">
+            <div class="text-white mt-4 w-50">
+                <h1 class="h1 text-white mb-4">Don't let your story go untold</h1>
+                <p>we help you form the story that matters to you: passions, life,
+                    achievement, family. Published in a book.</p>
+            </div>
+        </div>
+    </div>
+</div>
+{{!-- <h3>
     <i class="fas fa-book-reader"></i>
     <span>StoryBook</span>
+    Tell Your Story project was designed to explore the use of digital storytelling and storymapping in education in
+    order
+    to contrast early school leaving
 </h3>
 
-<div class="section">
+<div class="p-2">
     <p class="lead">
         Create public and private stories from your life
     </p>
-    <div class="divider"></div>
+    <hr class="my-4">
     <div class="section">
-       <a href="/auth/google" class="btn red darken-4"><i class="fab fa-google left"></i>log in with google</a> 
+        <a href="/auth/google" class="btn btn-danger"><i class="fab fa-google left"></i> log in with google</a>
     </div>
-</div>
+</div> --}}

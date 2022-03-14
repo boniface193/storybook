@@ -1,0 +1,45 @@
+<section id="content-wrapper">
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="content-title">Edit Story</h2>
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item" aria-current="page"> <a href="/stories" class="text-decoration-none"
+                            style="color: inherit;">Stories</a> </li>
+                    <li class="breadcrumb-item active" aria-current="page">Edit</li>
+                </ol>
+            </nav>
+            <form action="/story/{{story._id}}" method="post">
+                <input type="hidden" name="_method" value="PUT">
+                <div class="col-md-8">
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Title
+                        </label>
+                        <input type="text" class="form-control" id="title" name="title" value="{{story.title}}">
+                    </div>
+                    <div class="mb-4">
+                        <label for="exampleFormControlInput1" class="form-label">
+                            Select Mode
+                        </label>
+                        <select class="form-select" id="status" name="status" aria-label="Default select example">
+                            {{#select story.status}}
+                            <option selected value="private">Private</option>
+                            <option value="public">Public</option>
+                            {{/select}}
+                        </select>
+                    </div>
+                    <div class="mb-4">
+                        <label for="body" class="form-label">Tell Us Your Story</label>
+                        <textarea class="form-control" id="body" name="body" rows="3" >{{story.body}}</textarea>
+                    </div>
+                    <button class="btn btn-success" id="loading" type="submit" onclick="onLoading()">UPDATE </button>
+                    <button class="btn btn-warning text-white" id="cancel" onclick="onCancel()"
+                        type="reset">CANCEL</button>
+                </div>
+
+            </form>
+
+        </div>
+    </div>
+</section>

@@ -1,0 +1,49 @@
+@import url(https://zavoloklom.github.io/material-design-iconic-font/css/docs.md-iconic-font.min.css);
+
+
+/*Floating Action Button*/
+
+.fabs {
+  bottom: 0;
+  position: fixed;
+  margin: 1em;
+  right: 0;
+  z-index: 998;
+}
+
+.fabd {
+  display: block;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  text-align: center;
+  color: #FFF;
+  background: #f04141;
+  margin: 25px auto 0;
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  -webkit-transition: all .1s ease-out;
+  -moz-transition: all .1s ease-out;
+  -o-transition: all .1s ease-out;
+  transition: all .1s ease-out;
+  position: relative;
+  z-index: 998;
+  overflow: hidden;
+}
+
+.fabd > i {
+  font-size: 2em;
+  line-height: 55px;
+  -webkit-transition: all .2s ease-out;
+  -moz-transition: all .2s ease-out;
+  -o-transition: all .2s ease-out;
+  transition: all .2s ease-in-out;
+}
+
+#prime:hover{
+    color: #eceff1;
+}
+
+.fabd.show > i {
+	transform: rotate(135deg)
+}
