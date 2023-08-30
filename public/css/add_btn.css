@@ -12,14 +12,16 @@
 }
 
 .fabd {
-  display: block;
+  display: flex;
   width: 56px;
   height: 56px;
   border-radius: 50%;
-  text-align: center;
   color: #FFF;
-  background: #f04141;
-  margin: 25px auto 0;
+  text-decoration: none;
+  background: purple;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
   box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
   cursor: pointer;
   -webkit-transition: all .1s ease-out;
@@ -31,19 +33,20 @@
   overflow: hidden;
 }
 
-.fabd > i {
-  font-size: 2em;
-  line-height: 55px;
+.fabd>span {
+  font-size: 25px;
+  margin-bottom: 5px;
   -webkit-transition: all .2s ease-out;
   -moz-transition: all .2s ease-out;
   -o-transition: all .2s ease-out;
   transition: all .2s ease-in-out;
 }
 
-#prime:hover{
-    color: #eceff1;
+.fabd.show>span {
+  transform: rotate(135deg);
+  margin-top: 5px;
 }
 
-.fabd.show > i {
-	transform: rotate(135deg)
+.fabd:hover {
+  color: #fff;
 }

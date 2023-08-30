@@ -5,8 +5,9 @@
 <body>
     <div id="wrapper">
         <aside id="sidebar-wrapper">
-            <div class="sidebar-brand">
-                <h2>Logo</h2>
+            <div class="sidebar-brand d-flex px-4 p-4">
+                <i class="fas fa-book-reader fa-3x text-primary"></i>
+                <h2>Story Book</h2>
             </div>
             <ul class="sidebar-nav">
                 <li class="notActive">
@@ -15,27 +16,27 @@
                 <li class="notActive">
                     <a href="/public"><i class="fa fa-bullhorn"></i>Public</a>
                 </li>
-                <li class="notActive">
-                    <a href="/edit"><i class="fa fa-user"></i>Users</a>
+                <li class="notActive ">
+                    <a href="#"><i class="fa fa-user"></i>Users</a>
                 </li>
             </ul>
             <a class="hover-title" href="/auth/logout">
-                <div class="btn btn-secondary logout">Logout</div>
+                <div class="btn btn-secondary rounded-0 logout fw-bold fs-6">Logout</div>
             </a>
         </aside>
 
         <div id="navbar-wrapper">
             <nav class="navbar navbar-inverse">
-                <div class="container-fluid">
+                <div class="container">
                     <div class="navbar-header">
                         <a href="#" class="navbar-brand" id="sidebar-toggle"><i class="fa fa-bars"></i></a>
                     </div>
                 </div>
             </nav>
         </div>
-
-        {{{body}}}
-
+        <div class="container">
+            {{{body}}}
+        </div>
     </div>
 
     {{> _footer}}
